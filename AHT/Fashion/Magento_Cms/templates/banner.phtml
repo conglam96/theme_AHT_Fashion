@@ -1,0 +1,125 @@
+<?php ?>
+<script>
+      //khai báo biến slideIndex đại diện cho slide hiện tại
+      var slideIndexsss;
+      // KHai bào hàm hiển thị slide
+      function showSlidesss() {
+          var i;
+          var slides = document.getElementsByClassName("mySlidess");
+          var dots = document.getElementsByClassName("dot");
+          for (i = 0; i < slides.length; i++) {
+             slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+
+          slides[slideIndexsss].style.display = "block";  
+          dots[slideIndexsss].className += " active";
+          //chuyển đến slide tiếp theo
+          slideIndexsss++;
+          //nếu đang ở slide cuối cùng thì chuyển về slide đầu
+          if (slideIndexsss > slides.length - 1) {
+            slideIndexsss = 0
+          }    
+          //tự động chuyển đổi slide sau 5s
+          setTimeout(showSlidesss, 2000);
+      }
+      //mặc định hiển thị slide đầu tiên 
+      showSlidesss(slideIndexsss = 0);
+
+
+      function currentSlidess(n) {
+        showSlidesss(slideIndexsss = n);
+      }
+</script>
+<div class="slideshow-container">
+        <div class="mySlidess fade">
+          <img src="<?= $block->escapeUrl($block->getViewFileUrl('images/banner4.jpg')); ?>" alt="#" style="width:100%" />
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="text">
+                	<div class="text1">new</div>
+                	<div class="text2">collection</div>
+                	<div class="text3">trend.fashion</div>
+                	<div class="text4">upto 50% off</div>
+                </div>
+                <div class="purchase">
+                		<p><a href="#">purchase now</a></p>
+                		<div id="my-div"></div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+
+        <div class="mySlidess fade">
+          <img src="<?= $block->escapeUrl($block->getViewFileUrl('images/banner2.jpg')); ?>" alt="#" style="width:100%" />
+           <div class="container">
+            <div class="row">
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                	<div class="text">
+                  	<div class="text1">new</div>
+                  	<div class="text2">collection</div>
+                  	<div class="text3">trend.fashion</div>
+                  	<div class="text4">upto 50% off</div>
+                  </div>
+                <div class="purchase">
+                		<p><a href="#">purchase now</a></p>
+                		<div id="my-div1"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mySlidess fade">
+          <img src="<?= $block->escapeUrl($block->getViewFileUrl('images/banner3.jpg')); ?>" alt="#" style="width:100%">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                	<div class="text">
+                  	<div class="text1">new</div>
+                  	<div class="text2">collection</div>
+                  	<div class="text3">trend.fashion</div>
+                  	<div class="text4">upto 50% off</div>
+                  </div>
+                <div class="purchase">
+              		<p><a href="#">purchase now</a></p>
+              		<div id="my-div1"></div>
+                </div>
+                </div>
+              </div>
+            </div>
+        </div>
+      <br>
+
+      <div class="dots" style="text-align:center">
+        <span class="dot" onclick="currentSlidess(0)"></span> 
+        <span class="dot" onclick="currentSlidess(1)"></span> 
+        <span class="dot" onclick="currentSlidess(2)"></span> 
+      </div>
+
+     <a class="w3-button w3-black w3-display-left" onclick="plsDivs(-1)">&#10094;</a>
+  	 <a class="w3-button w3-black w3-display-right" onclick="plsDivs(1)">&#10095;</a>
+</div>
+<script>
+var slideIndexssss = 1;
+shoDivs(slideIndexssss);
+
+function plsDivs(n) {
+  shoDivs(slideIndexssss += n);
+}
+
+function shoDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlidess");
+  if (n > x.length) {slideIndexssss = 1}
+  if (n < 1) {slideIndexssss = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndexssss-1].style.display = "block";  
+}
+</script>

@@ -1,0 +1,88 @@
+<div class="countdown">
+
+	<div class="countdowns container">
+
+		<div class="move-to">
+			<?php
+			echo $this->getLayout()
+			->createBlock('Magento\Cms\Block\Block')
+			->setBlockId('countdown')
+			->toHtml();
+			?>
+			
+		</div>
+
+		<!-- <div class="text">
+			<p class="today">today's hot deal</p>
+			<p class="title">Louis Vuitton Bags</p>
+			<p class="des">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed	do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			<span class="sale-price">$86.68</span>
+			<span class="old-price">$155.00</span>
+			<div class="icon">
+				<img src="<?= $block->escapeUrl($block->getViewFileUrl('images/icon4.png')); ?>" alt="#" id="icon4"/>
+				<img src="<?= $block->escapeUrl($block->getViewFileUrl('images/icon3.png')); ?>" alt="#" id="icon3"/>
+				<img src="<?= $block->escapeUrl($block->getViewFileUrl('images/icon2.png')); ?>" alt="#" id="icon2"/>
+				<img src="<?= $block->escapeUrl($block->getViewFileUrl('images/icon1.png')); ?>" alt="#" id="icon1"/>
+				<div id="divv1"></div>
+				<div id="divv2"></div>
+				<div id="divv3"></div>
+				<div id="divv4"></div>
+			</div>
+			<div id="countdown">
+			    <p id="day">Days</p>
+			    <p id="hour">Hours</p>
+			    <p id="min">Mins</p>
+			    <p id="sec">Secs</p>
+			  <div id='tiles'></div>
+			</div>
+		</div> -->
+		<!-- <div id="countdown">
+			    <p id="day">Days</p>
+			    <p id="hour">Hours</p>
+			    <p id="min">Mins</p>
+			    <p id="sec">Secs</p>
+			  <div id='tiles'></div>
+			</div> -->
+
+	</div>
+
+
+
+
+</div>
+
+<!-- <script>
+	var target_date = new Date().getTime() + (1000*3600*48); // set the countdown date
+	var days, hours, minutes, seconds; // variables for time units
+
+	var countdown = document.getElementById("tiles"); // get tag element
+
+	getCountdown();
+
+	setInterval(function () { getCountdown(); }, 1000);
+
+	function getCountdown(){
+
+		// find the amount of "seconds" between now and target
+		var current_date = new Date().getTime();
+		var seconds_left = (target_date - current_date) / 1000;
+
+		days = pad( parseInt(seconds_left / 86400) );
+		seconds_left = seconds_left % 86400;
+			 
+		hours = pad( parseInt(seconds_left / 3600) );
+		seconds_left = seconds_left % 3600;
+			  
+		minutes = pad( parseInt(seconds_left / 60) );
+		seconds = pad( parseInt( seconds_left % 60 ) );
+
+		// format countdown string + set tag value
+		countdown.innerHTML = "<span>" + days + "</span><span>" + hours + "</span><span>" + minutes + "</span><span>" + seconds + "</span>"; 
+	}
+
+	function pad(n) {
+		return (n < 10 ? '0' : '') + n;
+	}
+</script>
+ -->
+
